@@ -1,0 +1,63 @@
+
+body
+    font-family roboto
+    background: secondary
+
+img 
+    width auto
+    height auto
+    object-fit cover
+
+.file-type 
+    height 0
+    width 0
+    position absolute
+    visibility hidden
+    left 3rem
+
+
+.mobile 
+    +$responsive(mdAndUp)
+        display none
+
+.desktop 
+    +$responsive(smAndDown)
+        display none 
+
+
+//scroll layouts
+::-webkit-scrollbar 
+    width 5px
+    height 5px
+
+::-webkit-scrollbar-track 
+    -webkit-box-shadow inset 0 0 6px gray 
+    border-radius 10px
+
+ 
+::-webkit-scrollbar-thumb 
+    border-radius 10px
+    -webkit-box-shadow inset 0 0 6px gray
+
+
+
+//text field number remove arrow
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.vm--modal 
+    overflow-y: auto !important;
+
+.v-btn__content 
+    width: 100%;
+    white-space: normal;
+
+

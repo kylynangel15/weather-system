@@ -1,0 +1,8 @@
+/// Breakpoint Mixins Responsive
+$responsive(breakpoints)
+    conditions = ()
+    for breakpoint in breakpoints
+        push(conditions, $media_queries[breakpoint])
+    conditions = join(", ", conditions)
+    @media conditions
+        {block}
