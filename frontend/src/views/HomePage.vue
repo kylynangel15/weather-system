@@ -1,6 +1,11 @@
 <template>
-  <div class="w-board">
+  <div class="w-board" :class="weatherLoading ? 'w-loading' : ''">
 
+    <div :class="weatherLoading ? 'loading' : ''">
+      <div>
+        <img class="hidden" src="https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="">
+      </div>
+    </div>
     <div class="info-container">
       <search-section class="mobile"></search-section>
       <info-section></info-section>
@@ -22,31 +27,38 @@ import MapCard from '../components/cards/MapCard.vue';
 import InfoSection from '../components/sections/InfoSection';
 import SearchSection from '../components/sections/SearchSection';
 import ForecastSection from '../components/sections/ForecastSection';
+import { useWeatherStore } from '../stores/WeatherStore';
 
 export default {
   name: 'HomePage',
   data () {
     return {
-      weatherInfo: '',
+      weatherStore: useWeatherStore(),
+      weatherDefault: 'Yokohama',
     }
   },
   created() {
+    this.weatherStore.setLoading(true);
     this.getWeather()
+  },
+  computed: {
+    weather() {
+      return useWeatherStore().weather;
+    },
+    weatherLoading() {
+      return useWeatherStore().loading;
+    },
+  },
+  watch: {
+    weather() {
+      if (this.weather) {
+        this.weatherStore.setLoading(false);
+      }
+    },
   },
   methods: {
     getWeather() {
-      this.axios
-        .get('/api/get-weather', {
-          params: {
-            search: 'Yokohama',
-          },
-        })
-        .then(({data}) => {
-            console.log(data)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+      this.weatherStore.getWeather(this.weatherDefault);
     }
   },
   components: {

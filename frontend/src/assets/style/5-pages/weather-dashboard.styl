@@ -1,7 +1,28 @@
+.w-loading
+    position: fixed
+
 .w-board
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    .loading
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(3px);
+        z-index: 10000;
+        overflow: hidden;
+        background: #000000cf;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img
+            width: 5rem;
+            display inline !important;
 
     +$responsive(tableAndDown)
         flex-direction: column;

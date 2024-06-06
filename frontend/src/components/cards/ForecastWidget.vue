@@ -2,7 +2,7 @@
     <div class="fw-widget">
 
         <div class="fw-widget__time">
-            <h3>1:00 PM</h3>
+            <h3>{{ forecast?.time ?? '01:00 PM' }}</h3>
         </div>
 
         <div class="fw-widget__content">
@@ -13,19 +13,28 @@
 
             <div class="content-info">
                 <div class="cw-degree">
-                    <h1>28</h1>
+                    <h1>{{ forecast?.temperature ?? '15' }}</h1>
                     <span>°C</span>
                 </div>
 
                 <div class="cw-desc">
-                    <h2>Cloudy</h2>
+                    <h2>{{ forecast?.weather_main ?? 'Cloudy' }}</h2>
                 </div>
             </div>
         </div>
 
         <div class="fw-widget__date">
-            <p class="fw-day">Mon</p>
-            <p class="fw-date">06/05/2025</p>
+            <p class="fw-day">{{ forecast?.day_short ?? 'Mon'}}</p>
+            <p class="fw-date">{{ forecast?.date_short ?? '06/06/2024' }}</p>
         </div>
     </div>
 </template>
+<script>
+
+export default {
+  name: 'ForeCastWidget',
+  props: [
+    'forecast',
+  ],
+}
+</script>

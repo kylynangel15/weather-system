@@ -16,6 +16,7 @@ class ItemTransformer
             'day' => $date->format('l'),
             'day_short' => $date->format('D'),
             'temperature' => $item['main']['temp'],
+            'feels_like' => $item['main']['feels_like'],
             'pressure' => $item['main']['pressure'],
             'humidity' => $item['main']['humidity'],
             'wind_speed' => $item['wind']['speed'],

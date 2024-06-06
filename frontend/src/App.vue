@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import { useMainStore } from './stores/store';
+import { useConfigStore } from './stores/ConfigStore';
 
 export default {
   name: 'App',
   data () {
     return {
-      store: useMainStore(),
+      configStore: useConfigStore(),
       googleMapApi: '',
     }
   },
@@ -25,7 +25,7 @@ export default {
         .get('/api/get-config-key')
         .then((response) => {
           this.googleMapApi = response.data.google_map_api
-          this.store.setGoogleApi(this.googleMapApi);
+          this.configStore.setGoogleApi(this.googleMapApi);
 
         }).catch((error) => {
           console.log(error)
