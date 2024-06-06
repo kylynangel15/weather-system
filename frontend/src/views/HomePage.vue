@@ -1,49 +1,52 @@
 <template>
   <div class="w-board">
 
-    <div class="w-board__info">
-      <current-widget></current-widget>
-      
-      <div class="info-desc">
-        <info-widget></info-widget>
-        <info-widget></info-widget>
-        <info-widget></info-widget>
-        <info-widget></info-widget>
+    <div class="info-container">
+      <div class="w-board__info">
+        <div class="cw-section">
+          <current-widget></current-widget>
+        </div>
+        
+        <div class="info-desc">
+          <info-widget></info-widget>
+          <info-widget></info-widget>
+          <info-widget></info-widget>
+          <info-widget></info-widget>
+        </div>
       </div>
     </div>
 
-
-    <div class="w-board__more">
-      <input type="search">
-
-
-      <div class="fore-desc">
-
-        <div class="fore-desc__header"> 
-          <div>
-            <h4>Forecast</h4>
-            <h1>Next 5 Hours</h1>
+    <div class="more-container">
+      <div class="w-board__more">
+  
+        <div class="input-section">
+          <i class="fa fa-search icon"></i>
+          <input type="search" placeholder="Search">
+        </div>
+        
+  
+        <div class="fore-desc">
+          <div class="fore-desc__header"> 
+              <h4>Forecast</h4>
+              <h1>Next 5 Hours</h1>
           </div>
-          <p>See More</p>
+  
+          <div class="fore-desc__content"> 
+            <div class="fore-section">
+              <forecast-widget></forecast-widget>
+              <forecast-widget></forecast-widget>
+              <forecast-widget></forecast-widget>
+              <forecast-widget></forecast-widget>
+              <forecast-widget></forecast-widget>
+            </div>
+          </div>
         </div>
-
-
-        <div class="fore-desc__content"> 
-          <forecast-widget></forecast-widget>
-          <forecast-widget></forecast-widget>
-          <forecast-widget></forecast-widget>
-          <forecast-widget></forecast-widget>
-          <forecast-widget></forecast-widget>
+  
+        <div class="map-section">
+          <map-card></map-card>
         </div>
-
       </div>
     </div>
-
-
-    <div class="w-board__map">
-    <map-card></map-card>
-    </div>
-
   </div>
 </template>
 <script>

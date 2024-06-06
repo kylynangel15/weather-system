@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { mapActions } from 'pinia';
 import { useMainStore } from './stores/store';
 
 export default {
