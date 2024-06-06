@@ -12,9 +12,19 @@
     width: 18vw;
     height: 23vw;
 
+    +$responsive(tableAndDown)
+        width: 36vw;
+        height: 65vw;
+        margin: 0;
+        margin-right: 0.5rem;
+
     &__time
         font-size: 1.5vw;
         font-weight: 600;
+
+        +$responsive(tableAndDown)
+            font-size: 4vw;
+
 
     &__content
         display: flex;
@@ -23,6 +33,9 @@
 
         .content-img
             width: 5vw;
+
+            +$responsive(tableAndDown)
+                width: 17vw;
 
         h1
             font-size: 2rem;
@@ -33,19 +46,34 @@
 
             h2
                 font-size: 1.5vw;
+                +$responsive(tableAndDown)
+                    font-size: 4vw;
 
         .cw-degree
             h1
                 font-size: 3vw;
+                +$responsive(tableAndDown)
+                    font-size: 10vw;
 
             span
                 font-size: 1vw;
+                +$responsive(tableAndDown)
+                    font-size: 5vw;
 
     &__date
         line-height: 1.7vw;
 
+        +$responsive(tableAndDown)
+            line-height: 4vw;
+            margin-top: 4vw;
+
         .fw-day
             font-size: 1.5vw;
+            +$responsive(tableAndDown)
+                font-size: 4vw;
 
         .fw-date
             font-size: 1vw;
+
+            +$responsive(tableAndDown)
+                font-size: 3vw;

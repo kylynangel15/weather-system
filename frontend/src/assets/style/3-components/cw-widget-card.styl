@@ -10,6 +10,9 @@
     flex-direction: column;
     justify-content: space-evenly;
      
+    +$responsive(tableAndDown)
+        padding: 1rem;
+        justify-content: unset
 
     &__header
         
@@ -17,18 +20,32 @@
             font-size: 3vw;
             font-weight: 600;
 
+            +$responsive(tableAndDown)
+                font-size: 7vw;
+
+
         .header-date
             font-size: 2vw;
             margin-top: 8px;
             line-height: 2.5vw;
+
+            +$responsive(tableAndDown)
+                font-size: 4vw;
+                line-height: 5vw;
 
     &__content
         display: flex;
         justify-content: space-evenly;
         align-items: center;
 
+        +$responsive(tableAndDown)
+            margin-top: 5vw;
+
         .content-img
             width: 12vw;
+
+            +$responsive(tableAndDown)
+                width: 27vw;
 
         .content-info
             display: flex;
@@ -42,17 +59,32 @@
                 font-weight: 600;
                 font-size: 5vw;
 
+                +$responsive(tableAndDown)
+                    font-size: 15vw;
+                    
+
             span
                 font-size: 2.5vw;
 
-
+                +$responsive(tableAndDown)
+                    font-size: 7vw;
 
         .cw-desc
+            +$responsive(tableAndDown)
+                line-height: 6vw;
+
+
             h2
                 font-size: 3vw;
 
+                +$responsive(tableAndDown)
+                    font-size: 7vw;
+
             p
                 font-size: 1.5vw;
+
+                +$responsive(tableAndDown)
+                    font-size: 4vw;
                 
 
 

@@ -17,12 +17,12 @@ img
 
 
 .mobile 
-    +$responsive(mdAndUp)
-        display none
+    +$responsive(tableAndUp)
+        display none !important
 
 .desktop 
-    +$responsive(smAndDown)
-        display none 
+    +$responsive(tableAndDown)
+        display none !important
 
 
 //scroll layouts
@@ -68,3 +68,39 @@ input[type=number] {
     width: 20rem;
     white-space: nowrap;
     overflow: hidden;
+
+
+ .input-section
+    height: 4vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+
+    +$responsive(tableAndDown)
+        height: unset;
+
+    input
+        width: 100%;
+        height: 4vw;
+        border-radius: 1rem;
+        padding: 1vw 1vw 1vw 4vw;
+
+        +$responsive(tableAndDown)
+            height: unset;
+            padding-left: 8vw;
+
+    i
+        position: absolute;
+        left: 2.5%;
+        bottom: 1.3vw;
+        font-size: 1.4vw;
+
+
+        +$responsive(tableAndDown)
+            font-size: 5vw;
+            bottom: 2.3vw;
+
+

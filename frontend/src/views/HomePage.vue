@@ -2,12 +2,13 @@
   <div class="w-board">
 
     <div class="info-container">
+      <search-section class="mobile"></search-section>
       <info-section></info-section>
     </div>
 
     <div class="more-container">
       <div class="w-board__more">
-        <search-section></search-section>
+        <search-section class="desktop"></search-section>
         <forecast-section></forecast-section>
         <div class="map-section">
           <map-card></map-card>

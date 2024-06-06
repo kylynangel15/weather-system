@@ -25,7 +25,10 @@ $only-screen-end-comma = "), "
 $media_queries = {
 
   tableAndDown :
-    $only-screen-min + $minMax-media[min_tablet] + $only-screen-end
+    $only-screen-min + $minMax-media[max_third] + $only-screen-end
+  
+  tableAndUp :
+    $only-screen + $minMax-media[min_tablet] + $only-screen-end
 
   xsOnly :
     $only-screen + $minMax-media[min_zero] + $max-width + $minMax-media[max_second] + $only-screen-end-comma 

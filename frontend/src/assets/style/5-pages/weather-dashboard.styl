@@ -3,18 +3,32 @@
     width: 100%;
     justify-content: space-between;
 
+    +$responsive(tableAndDown)
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
 
     .info-container
         width: 30%
 
+        +$responsive(tableAndDown)
+            width: 100%
+
     .more-container
         width: 70%
+
+        +$responsive(tableAndDown)
+            width: 100%;
 
     &__info
         width: 100%;
 
         .cw-section
             height: 36vw;
+
+            +$responsive(tableAndDown)
+                height: 82vw;
 
         .cw-widget
             height: 100%;
@@ -29,43 +43,35 @@
             height: 5vw;
             width: 31vw;
 
+            +$responsive(tableAndDown)
+                width: 100%;
+                padding: 1vw;
+                height: 10vw;
 
     &__more
         padding: 2vw;
         width: 100%;
 
-        .input-section
-            height: 4vw;
-            display: flex;
-            position: relative;
-            align-items: center;
-            background: white;
-            border-radius: 15px;
-            margin-bottom: 1rem;
-
-            input
-                width: 100%;
-                height: 4vw;
-                border-radius: 1rem;
-                padding: 1vw 1vw 1vw 4vw;
-
-            i
-                position: absolute;
-                left: 2.5%;
-                bottom: 1.3vw;
-                font-size: 1.4vw;
-
         .fore-desc
             height: 30vw;
+
+            +$responsive(tableAndDown)
+                height: unset
 
             &__header
                 h4
                     color: primary;
                     font-size: 1.5vw;
 
+                    +$responsive(tableAndDown)
+                        font-size: 3vw;
+
                 h1
                     font-weight: 600
                     font-size: 2vw;
+
+                    +$responsive(tableAndDown)
+                        font-size: 5vw;
 
             &__content
                 display: flex;
@@ -78,8 +84,18 @@
                     justify-content: space-between;
                     width: 100%;
 
+                    +$responsive(tableAndDown)
+                        overflow-x: scroll;
+                        padding-bottom: 1rem;
+
+        .map-section
+            +$responsive(tableAndDown)
+                margin-top: 1rem;
 
         .google-map
             width: 100%;
             border-radius: 15px;
             height: 26vw;
+            
+            +$responsive(tableAndDown)
+                height: 70vw;
