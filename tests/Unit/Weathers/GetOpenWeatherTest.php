@@ -23,6 +23,3 @@ test('can get open weather', function () {
     $this->assertArrayHasKey('forecast', $result);
     
 });
-
-
-//commenthere add negative scenario testcase

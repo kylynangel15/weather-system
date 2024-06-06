@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       weatherStore: useWeatherStore(),
-      weatherDefault: 'Yokohama',
+      weatherDefault: 'Tokyo',
     }
   },
   created() {

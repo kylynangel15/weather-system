@@ -22,8 +22,10 @@ export default {
   },
   methods: {
     handleSearch() {
-        this.weatherStore.setLoading(true);
-        this.weatherStore.getWeather(this.search);
+        if (this.search) {
+          this.weatherStore.setLoading(true);
+          this.weatherStore.getWeather(this.search);
+        }
     }
   },
 }

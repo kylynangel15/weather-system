@@ -16,6 +16,7 @@ class ApiResultHandler
     {
         $content = $response->getBody()->getContents();
         $results = json_decode($content, true);
+        
 
         return $results;
     }

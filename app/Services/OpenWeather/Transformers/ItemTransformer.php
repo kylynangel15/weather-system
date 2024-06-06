@@ -8,7 +8,7 @@ class ItemTransformer
 {
     public static function transform(array $item)
     {
-        $date = Carbon::parse($item['dt']);
+        $date = Carbon::parse($item['dt'])->setTimezone(config('app.timezone'));
         return [
             'date' => $date->format('F d, Y'),
             'date_short' => $date->format('m/d/Y'),

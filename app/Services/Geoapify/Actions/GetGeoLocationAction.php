@@ -10,16 +10,15 @@ class GetGeoLocationAction
 {
     public function execute($location) {
 
-        //commenthere must have request checking the validation of location
         
         $response = (new FetchGeoApiAction)->execute($location);
-        $results = ApiResultHandler::handle($response)['results'][0];
+
+        $results = ApiResultHandler::handle($response)['results'];
 
         if (empty($results)) {
             abort(404, "$location is not a city in Japan");
         } 
-        //commenthere must be in request form
 
-        return GeoapiTransformer::transform($results);
+        return GeoapiTransformer::transform($results[0]);
     }
 }

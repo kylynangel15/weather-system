@@ -18,6 +18,5 @@ pinia.use(piniaPluginPersistedstate);
 app.use(pinia);
 app.use(router);
 app.router = router;
-
 app.use(VueAxios, axios)
 app.mount("#app");
