@@ -2,46 +2,13 @@
   <div class="w-board">
 
     <div class="info-container">
-      <div class="w-board__info">
-        <div class="cw-section">
-          <current-widget></current-widget>
-        </div>
-        
-        <div class="info-desc">
-          <info-widget></info-widget>
-          <info-widget></info-widget>
-          <info-widget></info-widget>
-          <info-widget></info-widget>
-        </div>
-      </div>
+      <info-section></info-section>
     </div>
 
     <div class="more-container">
       <div class="w-board__more">
-  
-        <div class="input-section">
-          <i class="fa fa-search icon"></i>
-          <input type="search" placeholder="Search">
-        </div>
-        
-  
-        <div class="fore-desc">
-          <div class="fore-desc__header"> 
-              <h4>Forecast</h4>
-              <h1>Next 5 Hours</h1>
-          </div>
-  
-          <div class="fore-desc__content"> 
-            <div class="fore-section">
-              <forecast-widget></forecast-widget>
-              <forecast-widget></forecast-widget>
-              <forecast-widget></forecast-widget>
-              <forecast-widget></forecast-widget>
-              <forecast-widget></forecast-widget>
-            </div>
-          </div>
-        </div>
-  
+        <search-section></search-section>
+        <forecast-section></forecast-section>
         <div class="map-section">
           <map-card></map-card>
         </div>
@@ -50,10 +17,10 @@
   </div>
 </template>
 <script>
-import CurrentWidget from '../components/cards/CurrentWidget.vue';
-import ForecastWidget from '../components/cards/ForecastWidget.vue';
-import InfoWidget from '../components/inputs/InfoWidget.vue';
 import MapCard from '../components/cards/MapCard.vue';
+import InfoSection from '../components/sections/InfoSection';
+import SearchSection from '../components/sections/SearchSection';
+import ForecastSection from '../components/sections/ForecastSection';
 
 export default {
   name: 'HomePage',
@@ -82,10 +49,10 @@ export default {
     }
   },
   components: {
-    CurrentWidget,
-    InfoWidget,
-    ForecastWidget,
-    MapCard
+    MapCard,
+    InfoSection,
+    SearchSection,
+    ForecastSection
   }
 }
 </script>
