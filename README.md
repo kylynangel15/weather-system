@@ -75,17 +75,21 @@ This project adopts a loosely coupled approach with separate Laravel backend and
 
 ### Service Layer Code Design
 Api > Controllers > Services
+
 Services includes Actions and Transformers
 
-Actions:
-Actions have a separation of concern. Each action is easier to extend and can be reused in other business logic.
+    - Actions:
+        Actions have a separation of concern. Each action is easier to extend and can be reused in other business logic.
 
-Transformer:
-Transformers are data formatters and can be reusable as well.
+    - Transformer:
+        Transformers are data formatters and can be reusable as well.
 
 
 ## Frontend
-This is my sample Figma design. Designing is my weak side, but I'm still improving. I can excel more in backend, but I can also do frontend if a UI/UX template is provided to me.
+
+This is my sample Figma design. Designing is my weak side, but I'm still improving. 
+I can excel more in backend, but I can also do frontend if a UI/UX template is provided to me.
+
 ![Alt Text](https://raw.githubusercontent.com/kylynangel15/weather-system/main/frontend/src/assets/FigmaDesign.png)
 
 
