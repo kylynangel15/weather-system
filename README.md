@@ -1,13 +1,13 @@
 # Project Name
 
 ## Business Requirements
-[Add your business requirements here]
+https://docs.google.com/document/d/1wZyLe_P1GZ2R-2_XWqlNu2PuTQSYFQuilycAA2yfQb8/edit?usp=sharing
 
 ## Figma Design
-[Add the link to your Figma design here]
+https://www.figma.com/design/mlv9G8MsqR1AtOI8MSGGvh/Japan---Weather-App?node-id=1-246&t=vAtvhla1HiKIE8KW-1
 
 ## Demo
-[Add the link to your demo here]
+![Alt Text](https://github.com/kylynangel15/weather-system/blob/main/frontend/src/assets/WeatherAppDemo.gif)
 
 ## Pre-requisite
 - Laravel 11
