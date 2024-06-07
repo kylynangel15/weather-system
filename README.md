@@ -78,11 +78,12 @@ Api > Controllers > Services
 
 Services includes Actions and Transformers
 
-    - Actions:
-        Actions have a separation of concern. Each action is easier to extend and can be reused in other business logic.
+- Actions:
+  Actions have a separation of concern. Each action is easier to extend and can be reused in other business logic.
 
-    - Transformer:
-        Transformers are data formatters and can be reusable as well.
+- Transformer:
+  Transformers are data formatters and can also be reused effectively.
+
 
 
 ## Frontend
