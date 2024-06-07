@@ -11,7 +11,7 @@
         <div class="cw-widget__content">
             <img 
                 class="content-img" 
-                src="https://img.icons8.com/3d-fluency/94/storm.png" 
+                :src="$getWeatherIcon(weatherMain)" 
                 alt="storm"/> 
 
             <div class="content-info">
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="cw-desc">
-                    <h2>{{ weather?.weather.current.weather_main ?? 'Cloudy' }}</h2>
+                    <h2>{{ weather?.weather.current.weather_main ?? 'Clouds' }}</h2>
                     <p>{{ weather?.weather.current.weather_desc ?? 'Broken Clouds' }}s</p>
                 </div>
             </div>
@@ -42,6 +42,9 @@ export default {
     weather() {
       return useWeatherStore().weather;
     },
+    weatherMain() {
+        return this.weather?.weather.current.weather_main ?? 'Clouds'
+    }
   },
 
 }

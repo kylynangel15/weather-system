@@ -9,6 +9,7 @@ import './assets/css/app.css'
 import './assets/style/style.styl'
 import 'font-awesome/css/font-awesome.min.css'
 import '@mdi/font/css/materialdesignicons.css'
+import weatherIcons from './mixins/weatherIcons.js';
 
 
 const app = Vue.createApp(App);
@@ -18,5 +19,6 @@ pinia.use(piniaPluginPersistedstate);
 app.use(pinia);
 app.use(router);
 app.router = router;
+app.mixin(weatherIcons);
 app.use(VueAxios, axios)
 app.mount("#app");

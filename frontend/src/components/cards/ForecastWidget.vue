@@ -8,7 +8,7 @@
         <div class="fw-widget__content">
             <img 
                 class="content-img" 
-                src="https://img.icons8.com/3d-fluency/94/storm.png" 
+                :src="$getWeatherIcon(weatherMain)" 
                 alt="storm"/> 
 
             <div class="content-info">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="cw-desc">
-                    <h2>{{ forecast?.weather_main ?? 'Cloudy' }}</h2>
+                    <h2>{{ weatherMain }}</h2>
                 </div>
             </div>
         </div>
@@ -36,5 +36,12 @@ export default {
   props: [
     'forecast',
   ],
+  computed: {
+    weatherMain() {
+        return this.forecast?.weather_main ?? 'Clouds' 
+    }
+  },
+  mounted() {
+  }
 }
 </script>
