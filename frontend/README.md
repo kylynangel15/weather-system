@@ -49,7 +49,7 @@ yarn
 
 # Start the frontend development server
 yarn dev
-
+```
 
 ## About The Project
 This project adopts a loosely coupled approach with separate Laravel backend and Vue frontend.
