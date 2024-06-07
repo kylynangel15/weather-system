@@ -92,6 +92,10 @@ I can excel more in backend, but I can also do frontend if a UI/UX template is p
 ![Alt Text](https://raw.githubusercontent.com/kylynangel15/weather-system/main/frontend/src/assets/FigmaDesign.png)
 
 
-Preference for Stylus CSS pre-processors because of its concise syntax, which reduces redundancy and makes code more readable. It supports variables, mixins, and nested syntax which streamlines workflow and promotes code reuse. Stylus can perform mathematical operations and handle vendor prefixing automatically, enhancing productivity.
-CSS folder structure is based on Matthias Ott's structure for more specificity and modularity.
-Currently using the Options API in Vue 3 due to familiarity and faster coding capability, rather than the Composition API.
+### CSS (Stylus CSS pre-processors)
+
+- My CSS folder structure is based on this https://matthiasott.com/notes/how-i-structure-my-css for more specificity and modularity 
+
+- I prefer Stylus CSS pre-processors because of its concise syntax, which reduces redundancy and makes code more readable. It supports variables, mixins, and nested syntax which streamlines workflow and promotes code reuse. Stylus can perform mathematical operations and handle vendor prefixing automatically, enhancing productivity.
+  
+- I'm still not used to composition in vue 3, so for now, I'm sticking with options because I'm more comfortable with it and can code much faster.
