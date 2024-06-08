@@ -56,10 +56,12 @@ This project adopts a loosely coupled approach with separate Laravel backend and
 
 ## List of Tech Stack Used
 - Laravel 11
+    * Pest Testing
 - Api Integration 
     * geoapify
     * open weather
     * google map
+    * Backend (Laravel) to Frontend (vue) using axios
 - Vue
     * vue-router
     * pinia (state management)
