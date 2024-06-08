@@ -10,6 +10,6 @@ class ConfigController extends Controller {
     
     public function __invoke(Request $request)
     {
-        return (new ConfigService)->handle($request);
+        return (new ConfigService)->handle();
     }
 }
