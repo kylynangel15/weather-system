@@ -1,4 +1,4 @@
-# Project Name
+# Japan Weather App
 
 ## Business Requirements
 https://docs.google.com/document/d/1wZyLe_P1GZ2R-2_XWqlNu2PuTQSYFQuilycAA2yfQb8/edit?usp=sharing
