@@ -8,9 +8,8 @@ use App\Handlers\ApiResultHandler;
 
 class GetGeoLocationAction
 {
-    public function execute($location) {
-
-        
+    public function execute($location) 
+    {
         $response = (new FetchGeoApiAction)->execute($location);
 
         $results = ApiResultHandler::handle($response)['results'];

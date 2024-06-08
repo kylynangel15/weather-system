@@ -6,8 +6,8 @@ use App\Services\OpenWeather\Actions\GetOpenWeatherAction;
 
 class WeatherService
 { 
-    public function handle($request) {
-
+    public function handle($request) 
+    {
         $location = (new GetGeoLocationAction)->execute($request->search);
         $weather = (new GetOpenWeatherAction)->execute($location);
 

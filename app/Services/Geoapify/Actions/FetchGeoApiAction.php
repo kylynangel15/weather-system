@@ -8,7 +8,8 @@ use App\Handlers\ApiErrorHandler;
 
 class FetchGeoApiAction
 {
-    public function execute($location) {
+    public function execute($location) 
+    {
 
         $geoConfig = config('services.geoapify');
         

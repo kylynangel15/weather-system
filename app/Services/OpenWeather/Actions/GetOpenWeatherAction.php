@@ -11,8 +11,8 @@ class GetOpenWeatherAction
     const CURRENT_WEATHER = 'weather';
     const FORECAST_WEATHER = 'forecast';
 
-    public function execute($location) {
-
+    public function execute($location) 
+    {
         $currentRequest = (new FetchOpenWeatherApiAction)->execute($location, self::CURRENT_WEATHER);
         $current = ApiResultHandler::handle($currentRequest);
         

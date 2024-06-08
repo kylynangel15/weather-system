@@ -8,8 +8,8 @@ use App\Helpers\ConvertHelper;
 
 class FetchOpenWeatherApiAction
 {
-    public function execute($location, $type) {
-
+    public function execute($location, $type) 
+    {
         $openWeatherConfig = config('services.open_weather');
         
         // reformat the URL
