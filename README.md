@@ -31,6 +31,9 @@ GOOGLE_MAP_API_KEY=AIzaSyCbGS0GxqyqLazxJqAuevaTlN0Dtp6u_Uo
 # Install dependencies
 composer install
 
+# database migrate
+php artisan migrate
+
 # Serve the application
 php artisan serve
 
