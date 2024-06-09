@@ -56,7 +56,7 @@ This project adopts a loosely coupled approach with separate Laravel backend and
 
 ## List of Tech Stack Used
 - Laravel 11
-    * Pest Testing
+    * PHPUnit Testing
 - Api Integration 
     * geoapify
     * open weather
