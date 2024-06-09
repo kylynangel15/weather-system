@@ -2,17 +2,20 @@
 
 namespace Tests\Feature;
 
-use App\Handlers\ApiResultHandler;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Http;
 use Tests\TestCase;
-use Illuminate\Support\Facades\Http;
+use App\Models\User;
 
+class ConfigFeatureTest extends TestCase
+{
 
-it('can request config key information', function () {
+    public function test_can_request_config()
+    {
+        $response = $this->get('/api/get-config-key');
 
-    $url = config('app.url')."/api/get-config-key";
-    $response = Http::get($url);
-
-    $this->assertEquals(200, $response->getStatusCode());
-    $this->assertArrayHasKey('google_map_api', $response);
-});
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'google_map_api',
+            ]);
+    }
+}

@@ -1,13 +1,20 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
+use Tests\TestCase;
 use App\Services\Configs\ConfigService;
 
-test('can get config', function () {
-    $getConfig = new ConfigService();
+class GetConfigUnitTest extends TestCase
+{
 
-    $result = $getConfig->handle();
+    public function test_unit_can_get_config()
+    {
+        $getConfig = new ConfigService();
 
-    $this->assertArrayHasKey('google_map_api', $result);
-});
+        $response = $getConfig->handle();
+
+        $this->assertArrayHasKey('google_map_api', $response);
+
+    }
+}

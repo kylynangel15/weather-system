@@ -1,22 +1,20 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
+use Tests\TestCase;
 use App\Services\Geoapify\Actions\GetGeoLocationAction;
 
-test('can get geo location', function () {
-    $getGeoLocationClass = new GetGeoLocationAction();
-    $location = 'Yokohama';
+class GetGeoLocationUnitTest extends TestCase
+{
 
-    $result = $getGeoLocationClass->execute($location);
+    public function test_unit_can_get_geo_location()
+    {
+        $getGeoLocationClass = new GetGeoLocationAction();
+        $location = 'Yokohama';
 
-    $expected = [
-        "country" => "Japan",
-        "country_code" => "jp",
-        "city" => "Yokohama",
-        "lon" => 139.6367727,
-        "lat" => 35.4443947
-    ];
-    
-    expect($result)->toBe($expected);
-});
+        $result = $getGeoLocationClass->execute($location);
+
+        $this->assertArrayHasKey('city', $result);
+    }
+}

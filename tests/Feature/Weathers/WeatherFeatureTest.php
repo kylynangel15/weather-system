@@ -2,19 +2,20 @@
 
 namespace Tests\Feature;
 
-use App\Handlers\ApiResultHandler;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use Illuminate\Support\Facades\Http;
 
+class WeatherFeatureTest extends TestCase
+{
 
-it('can request weather information', function () {
+    public function test_can_request_weather()
+    {
+        $response = $this->get('/api/get-weather',[
+            'search' => 'Yokohama',
+        ]);
 
-    $url = config('app.url')."/api/get-weather";
-    $response = Http::get($url, [
-        'search' => 'Yokohama',
-    ]);
-
-    $this->assertEquals(200, $response->getStatusCode());
-    $this->assertArrayHasKey('weather', $response);
-});
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'weather',
+            ]);
+    }
+}
