@@ -1,11 +1,11 @@
 <template>
     <div>
-         <google-map
-        styles="dark"
-        class="google-map"
-        :api-key="googleKey"
-        :center="center"
-        :zoom="15"
+        <google-map
+          styles="dark"
+          class="google-map"
+          :api-key="googleKey"
+          :center="center"
+          :zoom="15"
         >
             <Marker :options="{ position: center }" />
         </google-map>
@@ -24,7 +24,7 @@ export default {
         center:  { 
             lat: 35.6821936, 
             lng: 139.762221
-        }
+        },
     }
   },
   computed: {
@@ -38,8 +38,8 @@ export default {
   watch: {
     weather() {
         this.center = {
-            lat: this.weather.location.lat,
-            lng: this.weather.location.lon,
+            lat: parseFloat(this.weather.location.lat),
+            lng: parseFloat(this.weather.location.lon),
         }
     },
   },
