@@ -7,7 +7,7 @@ https://docs.google.com/document/d/1wZyLe_P1GZ2R-2_XWqlNu2PuTQSYFQuilycAA2yfQb8/
 https://www.figma.com/design/mlv9G8MsqR1AtOI8MSGGvh/Japan---Weather-App?node-id=1-246&t=vAtvhla1HiKIE8KW-1
 
 ## Demo
-![Alt Text](https://github.com/kylynangel15/weather-system/blob/main/frontend/src/assets/DemoGIF.gif)
+![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3NieG5pa2l2ZmthdjNndWY4a3FmaHkxbGs3emF2OGNtaXJkcno1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9MxfTAfPG3yhNCXOMM/giphy.gif)
 
 ## Pre-requisite
 - Laravel 11
