@@ -23,10 +23,9 @@ https://www.figma.com/design/mlv9G8MsqR1AtOI8MSGGvh/Japan---Weather-App?node-id=
 git clone https://github.com/kylynangel15/weather-system.git
 
 # Add .env file
-# (for exam purposes only - *must be hidden in readme)
-GEOAPIFY_API_KEY=ed2ab923bb6a44bd8d7c5d876b5c10f6
-OPEN_WEATHER_API_KEY=6f7834e0e6420265af3f4236ce6a7674
-GOOGLE_MAP_API_KEY=AIzaSyCbGS0GxqyqLazxJqAuevaTlN0Dtp6u_Uo
+GEOAPIFY_API_KEY={geo_api_key}
+OPEN_WEATHER_API_KEY={open_weather_api_key}
+GOOGLE_MAP_API_KEY={google_map_api_key}
 
 # Install dependencies
 composer install
